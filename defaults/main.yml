@@ -1,0 +1,17 @@
+# Standards: 0.1
+---
+# @var dotnet_repo_distribution:description: Enforce another distribution for the repo
+dotnet_repo_distribution: "{{ ansible_distribution | lower }}"
+
+# @var dotnet_repo_version:description: Enforce another version for the repo
+dotnet_repo_version: "{{ ansible_distribution_version }}"
+
+# @var dotnet_repo_release:description: Enforce another release for the repo
+dotnet_repo_release: "{{ ansible_distribution_release }}"
+
+# @var dotnet_packages:description: List of packages to install
+dotnet_packages:
+  - dotnet-runtime-3.1
+  - aspnetcore-runtime-3.1
+
+...

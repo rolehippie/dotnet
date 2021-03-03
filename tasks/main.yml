@@ -1,0 +1,36 @@
+# Standards: 0.1
+---
+- name: Enforce libicu package
+  when: dotnet_repo_release | default('') == 'bionic'
+  apt:
+    deb: http://mirrors.edge.kernel.org/ubuntu/pool/main/i/icu/libicu63_63.2-2_amd64.deb
+    state: present
+  tags:
+    - dotnet
+
+- name: Download repo key
+  apt_key:
+    url: https://packages.microsoft.com/keys/microsoft.asc
+    id: BC528686B50D79E339D3721CEB3E94ADBE1229CF
+    state: present
+  tags:
+    - dotnet
+
+- name: Add apt repository
+  apt_repository:
+    repo: "deb https://packages.microsoft.com/{{ dotnet_repo_distribution }}/{{ dotnet_repo_version }}/prod {{ dotnet_repo_release }} main"
+    filename: microsoft
+    update_cache: True
+    state: present
+  tags:
+    - dotnet
+
+- name: Install required packages
+  loop: "{{ dotnet_packages }}"
+  package:
+    name: "{{ item }}"
+    state: present
+  tags:
+    - dotnet
+
+...
