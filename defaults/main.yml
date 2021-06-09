@@ -1,4 +1,4 @@
-# Standards: 0.1
+# Standards: 1.2
 ---
 # @var dotnet_repo_distribution:description: Enforce another distribution for the repo
 dotnet_repo_distribution: "{{ ansible_distribution | lower }}"
