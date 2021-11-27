@@ -11,7 +11,7 @@ dotnet_repo_release: "{{ ansible_distribution_release }}"
 
 # @var dotnet_packages:description: List of packages to install
 dotnet_packages:
-  - dotnet-runtime-3.1
-  - aspnetcore-runtime-3.1
+  - dotnet-runtime-6.0
+  - aspnetcore-runtime-6.0
 
 ...
