@@ -33,8 +33,8 @@ List of packages to install
 
 ```YAML
 dotnet_packages:
-  - dotnet-runtime-3.1
-  - aspnetcore-runtime-3.1
+  - dotnet-runtime-6.0
+  - aspnetcore-runtime-6.0
 ```
 
 ### dotnet_repo_distribution
