@@ -17,6 +17,7 @@ Building and improving this Ansible role have been sponsored by my current and p
 
 - [Requirements](#requirements)
 - [Default Variables](#default-variables)
+  - [dotnet_keyring](#dotnet_keyring)
   - [dotnet_packages](#dotnet_packages)
   - [dotnet_repo_distribution](#dotnet_repo_distribution)
   - [dotnet_repo_release](#dotnet_repo_release)
@@ -34,6 +35,16 @@ Building and improving this Ansible role have been sponsored by my current and p
 
 
 ## Default Variables
+
+### dotnet_keyring
+
+Path for the repository keyring
+
+#### Default value
+
+```YAML
+dotnet_keyring: /usr/share/keyrings/microsoft-archive-keyring.gpg
+```
 
 ### dotnet_packages
 
