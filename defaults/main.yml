@@ -14,4 +14,7 @@ dotnet_packages:
   - dotnet-runtime-6.0
   - aspnetcore-runtime-6.0
 
+# @var dotnet_keyring:description: Path for the repository keyring
+dotnet_keyring: /usr/share/keyrings/microsoft-archive-keyring.gpg
+
 ...
